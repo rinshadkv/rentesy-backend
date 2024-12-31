@@ -76,4 +76,4 @@ I am sending a credential file privately on LinkedIn including mail gun credenti
 By  default, backend application  runs on port 3000 
 for the drizzle server, you can access on <https://local.drizzle.studio/>
 
-## Link to Video :  https://vimeo.com/1043131994?share=copy
+####  Link to Video :  [https://vimeo.com/1043131994?share=copy](https://vimeo.com/1043139401/9b1b45eded?share=copy)
