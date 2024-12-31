@@ -24,12 +24,11 @@ export const sendResetPasswordEmail = async (req: any, res: any) => {
 
     await db.insert(tokens).values({ userId, token, expiresAt: expiryTime });
 
-    const resetLink = `${
-      process.env.WEB_SERVICE_URL || "http://localhost:3000"
-    }/reset-password/${token}`;
+    const resetLink = `${process.env.WEB_SERVICE_URL || "http://localhost:3000"
+      }/reset-password/${token}`;
 
     const emailData = {
-      from: "Support <support@sandbox865bdfb1a6184e57a5b222f6f7aa1357.mailgun.org>",
+      from: "Excited User <mailgun@sandboxcd2daab42ca04d2a8abf3cb4e6cf9e98.mailgun.org>",
       to: userEmail,
       subject: `Password Reset Request for ${userEmail}`,
       text: `Reset your password: ${resetLink}`,
@@ -42,7 +41,7 @@ export const sendResetPasswordEmail = async (req: any, res: any) => {
 `,
     };
 
-    await mg.messages().send(emailData);
+    await mg.messages().send(emailData).then(msg => console.log(msg)).catch(err => console.log(err));
     res.status(200).json({ message: "Password reset email sent successfully" });
   } catch (error) {
     console.error("Error sending reset email:", error);

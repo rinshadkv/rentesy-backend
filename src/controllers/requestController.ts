@@ -60,3 +60,11 @@ export const createRequest = async (req: Request, res: Response) => {
     res.status(400).json({ error: error?.message || "An error occurred" });
   }
 };
+
+
+export const getAllRequests = async (req: Request, res: Response) => {
+
+  const allRequests = await db.select().from(requestes);
+  res.json(allRequests);
+  res.status(200);
+}

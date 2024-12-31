@@ -1,0 +1,133 @@
+{
+	"info": {
+		"_postman_id": "ad793244-cf1d-4322-bfcf-8a8bf3d0ab72",
+		"name": "Rentesy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33669743"
+	},
+	"item": [
+		{
+			"name": "create a request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"name\": \"Alice Doe\",\r\n\t\"email\": \"rinshadkv20@gmail.com\",\r\n\t\"phone\": \"987654\",\r\n\t\"noOfUnits\": 10,\r\n\t\"role\": \"PROPERTY_OWNER\",\r\n\t\"propertyType\": \"COMMERCIAL\",\r\n\t\"durationToManage\": \"24\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/requests",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"requests"
+					]
+				},
+				"description": "Generated from cURL: curl --location 'http://localhost:3000/requests’ \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n  \"name\": \"Alice Doe\",\n  \"email\": \"hishamismail916@gmail.com\",\n  \"phone\": 987654,\n  \"noOfUnits\": 10,\n  \"role\": \"PROPERTY_OWNER\",\n  \"propertyType\": \"COMMERCIAL\",\n  \"durationToManage\": 24\n}'"
+			},
+			"response": []
+		},
+		{
+			"name": "get all requests",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/requests",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"requests"
+					]
+				},
+				"description": "Generated from cURL: curl --location 'http://localhost:3000/requests’ \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n  \"name\": \"Alice Doe\",\n  \"email\": \"hishamismail916@gmail.com\",\n  \"phone\": 987654,\n  \"noOfUnits\": 10,\n  \"role\": \"PROPERTY_OWNER\",\n  \"propertyType\": \"COMMERCIAL\",\n  \"durationToManage\": 24\n}'"
+			},
+			"response": []
+		},
+		{
+			"name": "complete reset password",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"token\":\"9ddb00aa488d74806b3883820c582f879dd07bc5929f1b967023aed69bbede8f\",\n    \"password\":\"sample\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/users/10/reset-password/finish",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"10",
+						"reset-password",
+						"finish"
+					]
+				},
+				"description": "Generated from cURL: curl --location 'http://localhost:3000/users/1/reset-password/finish' \\\n--header 'Content-Type: application/json' \\\n--data '{\n    \"token\":\"9ef16b9bf0f999076d1c0ea86578917bafda05bbe4c609285144bf9c4aae064b\",\n    \"password\":\"hisham\"\n}'"
+			},
+			"response": []
+		},
+		{
+			"name": "request for password request",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/users/11/reset-password/send",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"11",
+						"reset-password",
+						"send"
+					]
+				},
+				"description": "Generated from cURL: curl --location 'http://localhost:3000/users/1/reset-password/send' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n  \"name\": \"Alice Doe\",\n  \"email\": \"hishamismail916@gmail.com\",\n  \"phone\": 987654,\n  \"noOfUnits\": 10,\n  \"role\": \"PROPERTY_OWNER\",\n  \"propertyType\": \"COMMERCIAL\",\n  \"durationToManage\": 24\n}'"
+			},
+			"response": []
+		}
+	]
+}
