@@ -24,7 +24,7 @@ A streamlined API for managing user requests and associating them with users. Bu
 
    ```bash  
    git clone https://github.com/rinshadkv/rentesy-backend.git  
-   cd rentesy-bacend
+   cd rentesy-backend
    ```
 
 2. Install dependencies:
@@ -50,7 +50,7 @@ npx drizzle-kit generate
 npx drizzle-kit push
 ```
 
-5. Create Drizzle client
+5. Create a Drizzle client
 
 ```
  npx drizzle-kit studio
@@ -64,14 +64,16 @@ npm run dev
 
 ## Apis
 
-for apis you  can find a postman collection in the repository
+For APIs you  can find a postman collection in the repository
 [Rentesy.postman_collection.json]
 
 ## Credentails
 
-I am sending a credential file privatly on linkedin including mail gun credentials
+I am sending a credential file privately on LinkedIn including mail gun credentials
 
 ## Running ports
 
-By  default backend application  runs on port 3000
-for drizzle server you can access on <https://local.drizzle.studio/>
+By  default, backend application  runs on port 3000 
+for the drizzle server, you can access on <https://local.drizzle.studio/>
+
+## Link to Video :  https://vimeo.com/1043131994?share=copy
